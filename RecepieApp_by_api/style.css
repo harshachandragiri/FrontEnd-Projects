@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+}
+body{
+    background-color: rgb(160, 95, 109);
+}
+header nav{
+    background-color: grey;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+header nav h1{
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+header nav form{
+    display: flex;
+    justify-content: center;
+    
+}
+form input[type="text"]{
+    flex-grow: 1;
+    margin-right: 10px;
+
+}
+form button[type="submit"]{
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+form button[type="submit"]:hover{
+    background-color: rgba(0, 0, 0, 0.834);
+    color: white;
+    cursor: pointer;
+}
+form input[type="text"],button[type="submit"]{
+   border: none;
+   font-size: 10px;
+   padding: 10px;
+   border-radius: 4px;
+
+
+}
+/* Main Section */
+.recepiecontainer{
+    text-align: center;
+    margin-top: 20px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    grid-gap: 50px;
+    width: 90%;
+    margin: 10px auto;
+    padding: 20px;
+    place-items: center;
+}
+.recipe{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    border-radius: 0 5px 10px rgba(78,73,73,0.1),-5px -5px 10px rgba(78,73,73,0.5);
+    cursor: pointer;
+    max-width: 300px;
+    /* max-height: 400px; */
+    overflow: hidden;
+}
+.recipe img{
+    height: 300px;
+}
+.recipe h3{
+    font-size: 23px;
+}
+.recipe p{
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.416);
+    margin: 5px 0;
+}
+.recipe button{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 18px auto;
+    background-color: red;
+    border: none;
+
+}
+.recipe button:hover{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 18px auto;
+    background-color: rgba(255, 0, 0, 0.651);
+    border: none;
+    
+}
+@media screen  and (max-width:600px){
+    header nav{
+        flex-direction: column;
+    }
+    header nav form{
+        width: 80%;
+        margin-top: 20px;
+    }
+    
+}
